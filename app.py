@@ -56,7 +56,7 @@ def predict():
 
     # Predict if the URL is safe or unsafe
     prediction = model.predict(url_features)
-    result = "unsafe" if prediction[0] == 1 else "safe"
+    result = "Malicious" if prediction[0] == 1 else "Benign"
 
     # Render the result on the HTML page
     return render_template('index.html', prediction_text=f"The URL '{url}' is {result}.")
